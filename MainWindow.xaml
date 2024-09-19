@@ -1,0 +1,42 @@
+﻿<Window x:Class="ZipUpzip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZipUpzip"
+        mc:Ignorable="d"
+        Title="ZipUnzip" Height="200" Width="400">
+  <Grid>
+    <!-- Title -->
+    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="20" FontWeight="Bold">
+           Choose Folder to Zip/Unzip
+    </TextBlock>
+
+    <!-- Folder Selection -->
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0">
+      <TextBlock Text="Selected Folder:" VerticalAlignment="Center"/>
+      <TextBox x:Name="tbSelectedFolder" Width="200" Margin="10,0,10,0"/>
+      <Button Content="Browse Folder" Width="auto" Click="BrowseFolder_Click"/>
+    </StackPanel>
+
+    <!-- Date Picker for filtering by date -->
+    <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,120,0,0">
+      <TextBlock Text="Select Date Range:" HorizontalAlignment="Center" Margin="0,0,0,10" />
+      --><!--<StackPanel Orientation="Horizontal">
+        <TextBlock Text="From:" VerticalAlignment="Center"/>
+        <DatePicker x:Name="dpFromDate" Width="150" Margin="10,0"/>
+        <TextBlock Text="To:" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <DatePicker x:Name="dpToDate" Width="150" Margin="10,0"/>
+      </StackPanel>--><!--
+    </StackPanel>-->
+
+    <!-- Zip and Unzip Buttons -->
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0">
+      <Button Content="Zip Folder" Width="120" Margin="10" Click="ZipFolder_Click"/>
+      <Button Content="Unzip Folder" Width="120" Margin="10" Click="UnzipFolder_Click"/>
+    </StackPanel>
+
+    <!-- Status Message Placeholder (Optional) -->
+    <TextBlock x:Name="tbStatusMessage" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" FontSize="14" FontStyle="Italic"/>
+  </Grid>
+</Window>
